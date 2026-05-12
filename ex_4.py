@@ -9,8 +9,7 @@ tarifas_frete = {
 }
 
 class CalculadoraDeFrete:
-    @staticmethod
-    def calcular_frete(tipo_transporte, distancia):
+    def calcular_frete(self, tipo_transporte, distancia):
         if tipo_transporte not in tarifas_frete:
             raise ValueError("Tipo de transporte desconhecido")
         tarifa = tarifas_frete[tipo_transporte]
